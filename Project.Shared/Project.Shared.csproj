@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+
+		<PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+		<PackageReference Include="Mapster.DependencyInjection" Version="1.0.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.12" />
+		<PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="8.23.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="QuestPDF" Version="2023.12.1" />
+		<PackageReference Include="Mapster.Core" Version="1.2.1" />
+
+		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.18" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.18" />
+		<PackageReference Include="EFCore.NamingConventions" Version="7.0.2" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.23.0" />
+		<!--<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.14" />-->
+
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Project.security\Project.security.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Update="Resources\SharedController.ar.resx">
+	    <Generator></Generator>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\SharedController.en.resx">
+	    <Generator></Generator>
+	  </EmbeddedResource>
+	</ItemGroup>
+	
+
+
+
+
+
+</Project>

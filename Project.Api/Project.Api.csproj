@@ -1,0 +1,61 @@
+﻿
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Remove="Domains\multiContent\**" />
+	  <Content Remove="Domains\multiContent\**" />
+	  <EmbeddedResource Remove="Domains\multiContent\**" />
+	  <None Remove="Domains\multiContent\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="Properties\launchSettings.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+		
+		
+		<!--<PackageReference Include="DotNetEnv" Version="3.0.0" />-->
+			<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.12" />
+			<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.18">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+			<PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="8.23.0" />
+			<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.23.0" />
+
+
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Project.Shared\Project.Shared.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="BouncyCastle.Crypto">
+	    <HintPath>..\Dll\BouncyCastle.Crypto.dll</HintPath>
+	  </Reference>
+	  <Reference Include="itextsharp">
+	    <HintPath>..\Dll\itextsharp.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Domains\Lookups\Items\" />
+	  <Folder Include="Domains\Lookups\Ranks\" />
+	  <Folder Include="Domains\Requests\Statuses\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Reports\finance.png">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
+</Project>
